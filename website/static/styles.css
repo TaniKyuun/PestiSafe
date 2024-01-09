@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Work Sans", sans-serif;
+}
+
+body {
+  background: #cecece;
+  height: 100vh;
+}
+
+header {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: fixed;
+  background: rgba(174, 246, 148, 0.15);
+  z-index: 10;
+}
+
+header .logo-container {
+  grid-column: 2 / 6;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  min-width: 200px;
+}
+
+.logo-text {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 2rem;
+  color: white;
+}
+
+header nav {
+  grid-column: 11;
+  justify-self: end;
+}
+
+header nav ul {
+  display: flex;
+}
+
+header nav ul li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul li a {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  display: inline-block;
+  text-decoration: none;
+  white-space: nowrap;
+  color: white;
+}
+
+.hero {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(2, 66, 35, 0) 62.5%, #024223 100%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%),
+    url(img/aef8fb2cd567738619e6cf0ce2ed0336.jpg) center center,
+    lightgray 50% / cover no-repeat;
+}
+
+.hero-logo svg {
+  display: block;
+  margin: 0 auto;
+}
+
+.hero-content {
+  padding: 1rem 2rem;
+  text-align: center;
+  font-size: 2rem;
+  color: #aef694;
+}
+
+.starter-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.btn-starter {
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  background: #aef694;
+  color: #111;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  z-index: 1;
+  transition: padding 0.3s ease-in-out;
+}
+
+.btn-starter:hover {
+  background-color: #faef9b;
+  color: #272727;
+  padding-right: 40px;
+}
+
+.btn-starter-icon {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  opacity: 0;
+  transform: translateY(-50%);
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.btn-starter:hover .btn-starter-icon {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hero-wave {
+  bottom: 0;
+  left: 0;
+  height: 0px;
+  z-index: 0;
+}
+
+/* welcome section */
+.wrapper-welcome {
+  display: grid;
+  position: relative;
+  align-items: end;
+  justify-items: center;
+  justify-content: center;
+  background-color: #49874f;
+  z-index: -1;
+}
+
+.welcome-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+  margin-top: 20rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #49874f;
+}
+
+.welcome-container img {
+  width: 100%;
+  height: auto;
+  grid-column: 2 / 6;
+}
+
+.welcome-description {
+  grid-column: 7 / 12;
+  padding: 1rem 2rem;
+  text-align: center;
+  font-size: 1.5vw;
+  color: #000000;
+}
+
+/* vision section */
+.wrapper-vision {
+  display: grid;
+  position: relative;
+  align-items: end;
+  justify-items: center;
+  justify-content: center;
+  background-color: #6daa65;
+  z-index: -1;
+}
+
+.vision-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+  margin-top: 20rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #6daa65;
+}
+
+.vision-container img {
+  width: 100%;
+  height: auto;
+  grid-column: 7 / 12;
+}
+
+.vision-description {
+  padding: 1rem 2rem;
+  text-align: center;
+  font-size: 1.5vw;
+  grid-column: 2 / 6;
+  color: #000000;
+}
+
+/* mission section */
+.wrapper-mission {
+  display: grid;
+  position: relative;
+  align-items: end;
+  justify-items: center;
+  justify-content: center;
+  background-color: #90cc7b;
+  z-index: -1;
+}
+
+.mission-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+  margin-top: 20rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #90cc7b;
+}
+
+.mission-container img {
+  width: 100%;
+  height: auto;
+  grid-column: 2 / 6;
+}
+
+.mission-description {
+  grid-column: 7 / 12;
+  padding: 1rem 2rem;
+  text-align: center;
+  font-size: 1.5vw;
+  color: #000000;
+}
+
+.about-image {
+  display: block;
+  padding: 5px;
+  border-radius: 10px;
+  background: #d4f398;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.about-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Contact section */
+.wrapper-contact {
+  display: grid;
+  position: relative;
+  align-items: end;
+  justify-items: center;
+  justify-content: center;
+  background-color: #9ee087;
+  z-index: -1;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+  margin-top: 20rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #9ee087;
+}
+
+.contact-description {
+  padding: 1rem 2rem;
+  text-align: center;
+  font-size: 1.5vw;
+  grid-column: 6 / 6;
+  color: #000000;
+}
