@@ -18,7 +18,6 @@ class User(db.Model, UserMixin):
     email = db.Column(db.String(150), unique=True)
     first_name = db.Column(db.String(150))
     last_name = db.Column(db.String(150))
-    birth_date = db.Column(db.String(150))
     is_active = db.Column(db.Boolean, default=True)
     password = db.Column(db.String(150))
     results = db.relationship("Results")

@@ -5,6 +5,7 @@
     "mysecretkey",
     "Pesti",
     "pestikey",
+    "Pestisafe",
     "sqlalchemy",
     "werkzeug"
   ]

@@ -43,7 +43,6 @@ def sign_up():
         email = request.form.get("email")
         first_name = request.form.get("firstName")
         last_name = request.form.get("lastName")
-        birth_date = request.form.get("birthDate")
         password1 = request.form.get("password1")
         password2 = request.form.get("password2")
 
@@ -57,8 +56,6 @@ def sign_up():
             flash("First name must be greater than 1 character.", category="error")
         elif len(last_name) < 2:
             flash("Last name must be greater than 1 character.", category="error")
-        elif not birth_date:
-            flash("Birth date is required.", category="error")
         elif password1 != password2:
             flash("Passwords don't match.", category="error")
         elif len(password1) < 7:
@@ -69,7 +66,6 @@ def sign_up():
                 email=email,
                 first_name=first_name,
                 last_name=last_name,
-                birth_date=birth_date,
                 is_active=True,
                 password=generate_password_hash(password1, method="pbkdf2:sha256"),
             )
@@ -77,6 +73,6 @@ def sign_up():
             db.session.commit()
             login_user(new_user, remember=True)  # Use new_user instead of user
             flash("Account created!", category="success")
-            return redirect(url_for("views.login"))
+            return redirect(url_for("views.home"))
 
     return render_template("sign_up.html", user=current_user)
