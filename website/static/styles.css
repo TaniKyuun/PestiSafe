@@ -308,7 +308,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 50px auto;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -354,7 +353,7 @@ body {
   margin-bottom: 20px; /* Add some space below the flash message */
   border-radius: 5px; /* Add a rounded border */
   color: white; /* White text */
-  text-align:center; /* Centered text */
+  text-align: center; /* Centered text */
 }
 
 /* Style for success flash messages */
@@ -364,7 +363,7 @@ body {
 
 /* Style for error flash messages */
 .flash.error {
-  background-color: #f44336;; /* Red background */
+  background-color: #f44336; /* Red background */
 }
 
 /* Style for warning flash messages */
@@ -382,7 +381,6 @@ body {
 .close:hover {
   color: black; /* Black text */
 }
-
 
 .form-wrapper {
   display: flex;
@@ -544,10 +542,11 @@ body {
 /* Style for box container */
 .boxContainer {
   width: 300px; /* Same width as the image container */
-  border: 2px solid #000; /* Add a border */
+  border: 2px solid #e69c2d; /* Add a border */
   padding: 20px; /* Add some padding */
   margin-bottom: 20px; /* Add some space below the box container */
   border-radius: 5px; /* Add a rounded border */
+  background: #faef9b;
 }
 
 /* Style for level box */
@@ -587,7 +586,7 @@ body {
 }
 
 .dateDashboard {
-  color: #333; /* Make the table take up the full width of its container */
+  color: #fff; /* Make the table take up the full width of its container */
   font-size: 2em; /* Increase the font size */
   text-align: left; /* Align the text to the left */
 }
@@ -650,7 +649,7 @@ body {
 .title {
   text-align: left;
   font-size: 2em;
-  color: #333;
+  color: #fff;
 }
 
 /* Style for table */

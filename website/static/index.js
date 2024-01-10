@@ -1,15 +1,11 @@
-$('a[href^="#"]').on("click", function (event) {
-  var target = $(this.getAttribute("href"));
-  if (target.length) {
-    event.preventDefault();
-    $("html, body").stop().animate(
-      {
-        scrollTop: target.offset().top,
-      },
-      1000,
-      "easeInOutExpo"
-    );
-  }
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth",
+    });
+  });
 });
 
 // Get the header element
@@ -36,9 +32,8 @@ var closebtns = document.getElementsByClassName("close");
 // Loop through all close buttons
 for (var i = 0; i < closebtns.length; i++) {
   // When a close button is clicked
-  closebtns[i].addEventListener("click", function() {
+  closebtns[i].addEventListener("click", function () {
     // Hide the flash message
-    this.parentElement.style.display = 'none';
+    this.parentElement.style.display = "none";
   });
 }
-

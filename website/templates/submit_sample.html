@@ -1,14 +1,16 @@
 {% extends "base.html" %}
 {% block title %}Submit Sample{% endblock %}
 {% block content %}
-  <div class="container submit-sample-container">
-    <h1>Submit</h1>
-    <form method="post"
-          enctype="multipart/form-data"
-          class="submit-sample-form">
-      <label for="image" class="file-label">Choose a file</label>
-      <input type="file" name="image" id="image" class="form-control">
-      <button type="submit" class="btn btn-primary">Generate Result</button>
-    </form>
+  <div class="form-wrapper">
+    <div class="container submit-sample-container">
+      <h1>Submit</h1>
+      <form method="post"
+            enctype="multipart/form-data"
+            class="submit-sample-form">
+        <label for="image" class="file-label">Choose a file</label>
+        <input type="file" name="image" id="image" class="form-control">
+        <button type="submit" class="btn btn-primary">Generate Result</button>
+      </form>
+    </div>
   </div>
 {% endblock %}
