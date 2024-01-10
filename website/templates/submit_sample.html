@@ -1,14 +1,12 @@
 {% extends "base.html" %}
 {% block title %}Submit Sample{% endblock %}
-
 {% block content %}
-<h1 align="center">Submit</h1>
-
-<form method="POST" enctype="multipart/form-data">
-  <input type="file" name="image" id="image" class="form-control">
-  <br />
-  <div align="center">
-    <a href="{{ url_for('views.dashboard') }}" class="btn btn-primary">Generate Result</a>
-  </div>
-</form>
+  <h1 align="center">Submit</h1>
+  <form method="post" enctype="multipart/form-data">
+    <input type="file" name="image" id="image" class="form-control">
+    <br />
+    <div align="center">
+      <a href="{{ url_for("views.dashboard") }}" class="btn btn-primary">Generate Result</a>
+    </div>
+  </form>
 {% endblock %}

@@ -1,10 +1,11 @@
 {
-    "cSpell.words": [
-        "backref",
-        "Chlorpyrifos",
-        "mysecretkey",
-        "pestikey",
-        "sqlalchemy",
-        "werkzeug"
-    ]
+  "cSpell.words": [
+    "backref",
+    "Chlorpyrifos",
+    "mysecretkey",
+    "Pesti",
+    "pestikey",
+    "sqlalchemy",
+    "werkzeug"
+  ]
 }

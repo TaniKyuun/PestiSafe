@@ -20,7 +20,7 @@ def login():
             if check_password_hash(user.password, password):
                 flash("Logged in successfully!", category="success")
                 login_user(user, remember=True)
-                return redirect(url_for("views.home"))
+                return redirect(url_for("views.dashboard"))
             else:
                 flash("Incorrect password, try again.", category="error")
         else:
@@ -70,12 +70,13 @@ def sign_up():
                 first_name=first_name,
                 last_name=last_name,
                 birth_date=birth_date,
+                is_active=True,
                 password=generate_password_hash(password1, method="pbkdf2:sha256"),
             )
             db.session.add(new_user)
             db.session.commit()
-            login_user(user, remember=True)
+            login_user(new_user, remember=True)  # Use new_user instead of user
             flash("Account created!", category="success")
-            return redirect(url_for("views.home"))
+            return redirect(url_for("views.login"))
 
     return render_template("sign_up.html", user=current_user)

@@ -10,6 +10,11 @@ def home():
     return render_template("home.html", user=current_user)
 
 
+@views.route("/login")
+def login():
+    return render_template("login.html", user=current_user)
+
+
 @views.route("/result")
 @login_required
 def results():
