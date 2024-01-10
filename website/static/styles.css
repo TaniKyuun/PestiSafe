@@ -293,8 +293,61 @@ body {
   color: #000000;
 }
 
-/* Login section */
+/* Submit Sample Page */
+/* Style for container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
+/* Style for container in submit sample page */
+.submit-sample-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  background-color: #f8f9fa;
+  width: 80%;
+  max-width: 500px;
+}
+
+/* Style for heading in submit sample page */
+.submit-sample-container h1 {
+  margin-bottom: 20px;
+}
+
+/* Style for form in submit sample page */
+.submit-sample-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Style for file label in submit sample page */
+.submit-sample-form .file-label {
+  margin-bottom: 10px;
+}
+
+/* Style for file input in submit sample page */
+.submit-sample-form .form-control {
+  margin-bottom: 20px;
+}
+
+/* Style for button in submit sample page */
+.submit-sample-form .btn {
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+/* Login section */
 /* Style for flash messages */
 .flash {
   padding: 10px; /* Add some padding */
