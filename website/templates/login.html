@@ -52,16 +52,27 @@
     <div class="form-container">
       <div class="form-content">
         <div class="form-box">
+          {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            {% for category, message in messages %}
+              <div class="flash {{ category }}">{{ message }}
+                <button type="button" class="close" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
           <h2>Login</h2>
           <form method="post">
             <div class="input-box">
               <span class="icon"><ion-icon name="mail"></ion-icon></span>
-              <input type="email/text" id="email" name="email" required />
+              <input type="email/text" id="email" name="email"  />
               <label>Email</label>
             </div>
             <div class="input-box">
               <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-              <input type="password" id="password1" name="password1" required />
+              <input type="password" id="password1" name="password1" />
               <label>Password</label>
             </div>
             <button type="submit" class="btn-submit">Login</button>

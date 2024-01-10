@@ -27,3 +27,18 @@ window.addEventListener("scroll", function () {
     header.style.backgroundColor = "rgba(174, 246, 148, 0.15)";
   }
 });
+
+// JavaScript
+// Flash message Close Event
+// Get all close buttons
+var closebtns = document.getElementsByClassName("close");
+
+// Loop through all close buttons
+for (var i = 0; i < closebtns.length; i++) {
+  // When a close button is clicked
+  closebtns[i].addEventListener("click", function() {
+    // Hide the flash message
+    this.parentElement.style.display = 'none';
+  });
+}
+
