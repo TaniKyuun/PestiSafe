@@ -14,17 +14,19 @@ def login():
         email = request.form.get("email")
         password = request.form.get("password1")
 
-        # check if user exists
-        user = User.query.filter_by(email=email).first()
-        if user:
-            if check_password_hash(user.password, password):
-                flash("Logged in successfully!", category="success")
-                login_user(user, remember=True)
-                return redirect(url_for("views.dashboard"))
-            else:
-                flash("Incorrect password, try again.", category="error")
+        if len(email) < 1:
+                    flash("Email field is required. Please enter your email address.", category="error")
+        elif len(password) < 1:
+            flash("Password field is required. Please enter your password.", category="error")
         else:
-            flash("Email does not exist.", category="error")
+            # check if user exists
+            user = User.query.filter_by(email=email).first()
+            if user and check_password_hash(user.password, password):
+                    flash("Logged in successfully!", category="success")
+                    login_user(user, remember=True)
+                    return redirect(url_for("views.dashboard"))
+            else:
+                flash("Incorrect email or password, please try again.", category="error")
 
     return render_template("login.html", user=current_user)
 
@@ -77,6 +79,6 @@ def sign_up():
             db.session.commit()
             login_user(new_user, remember=True)  # Use new_user instead of user
             flash("Account created!", category="success")
-            return redirect(url_for("views.login"))
+            return redirect(url_for("views.dashboard"))
 
     return render_template("sign_up.html", user=current_user)

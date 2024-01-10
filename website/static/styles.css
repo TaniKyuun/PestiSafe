@@ -292,3 +292,179 @@ body {
   grid-column: 6 / 6;
   color: #000000;
 }
+
+/* Style for alert messages */
+.alert {
+  padding: 20px; /* Padding around the text */
+  background-color: #f44336; /* Red background */
+  color: white; /* White text */
+  opacity: 1; /* Fully visible */
+  transition: opacity 0.6s; /* Fade out over 600ms */
+}
+
+/* Style for success messages */
+.alert.success {
+  background-color: #4CAF50; /* Green background */
+}
+
+/* Style for close button */
+.closebtn {
+  margin-left: 15px; /* Space to the left of the button */
+  color: white; /* White text */
+  font-weight: bold; /* Bold text */
+  float: right; /* Position to the right */
+  font-size: 22px; /* Large text */
+  line-height: 20px; /* Space between lines of text */
+  cursor: pointer; /* Cursor changes to a hand when hovering over the button */
+}
+
+/* Style for close button when hovered over */
+.closebtn:hover {
+  color: black; /* Black text */
+}
+
+/* Style for dashboard container */
+/* Style for box container */
+.boxContainer {
+  width: 300px; /* Same width as the image container */
+  border: 2px solid #000; /* Add a border */
+  padding: 20px; /* Add some padding */
+  margin-bottom: 20px; /* Add some space below the box container */
+  border-radius: 5px; /* Add a rounded border */
+}
+
+/* Style for level box */
+.levelBox {
+  width: 100%; /* Full width of the box container */
+  height: 200px; /* Same height as the images */
+  border: 2px solid #000; /* Add a border */
+  border-radius: 15px; /* Add a rounded border */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow */
+  display: flex; /* Use flexbox to center the text */
+  justify-content: center; /* Center the text horizontally */
+  align-items: center; /* Center the text vertically */
+}
+
+/* Style for critical level box */
+.levelBox.critical-level {
+  background-color: #FF4500; /* Orange red */
+}
+
+/* Style for image container */
+.imageContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+/* Style for images */
+.imageContainer img {
+  width: 344px; /* Set a specific width */
+  height: 304px; /* Set a specific height */
+  object-fit: cover; /* This will make the images cover their frame */
+  border: 2px solid #FAEF9B; /* Add a border */
+  margin-right: 20px; /* Add some space to the right of the images */
+  margin-left: 2px;
+  border-radius: 15px; /* Add a rounded border */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.dateDashboard{
+  color: #333; /* Make the table take up the full width of its container */
+  font-size: 2em; /* Increase the font size */
+  text-align: left; /* Align the text to the left */
+}
+/* Style for tables */
+.table {
+  width: 100%; /* Make the table take up the full width of its container */
+  font-size: 1em; /* Increase the font size */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+/* Style for table headers */
+.table th {
+  background-color: #FFE135; /* Set the background color of the headers */
+  text-align: center; /* Align the text to the center */
+  font-size: 1.2em; /* Increase the font size of the headers */
+  padding: 15px; /* Adjust the padding around the data */
+  border-radius: 5px;
+}
+
+/* Style for table data */
+.table td {
+  background-color: #FAEF9B; /* Set the background color of the data */
+  text-align: center; /* Align the text to the center */
+  padding: 15px; /* Adjust the padding around the data */
+  border-radius: 5px;
+}
+
+
+/* Style for legend row */
+.legend-row th {
+  text-align: left; /* Align the text to the left */
+}
+
+.legend-row {
+  background-color: #333; /* Set the background color of the legend row */
+  color: #000000; /* Set the text color of the legend row */
+}
+
+/* Style for normal level */
+.table td.normal-level {
+  background-color: #eef072; /* Set the background color of the normal level */
+  color: #000000; /* Set the text color of the normal level */
+}
+
+/* Style for high level */
+.table td.high-level {
+  background-color: #e69c2d; /* Set the background color of the high level */
+  color: #000000; /* Set the text color of the high level */
+}
+
+/* Style for critical level */
+.table td.critical-level {
+  background-color: #FF4500; /* Set the background color of the critical level */
+  color: #000000; /* Set the text color of the critical level */
+}
+
+/* Style for table results  */
+/* Style for title */
+.title {
+  text-align: left;
+  font-size: 2em;
+  color: #333;
+}
+
+/* Style for table */
+.tableResults {
+  width: 100%; /* Make the table take up the full width of its container */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+/* Style for table headers */
+.tableResults th {
+  background-color: #FFE135; /* Set the background color of the headers */
+  text-align: center; /* Align the text to the center */
+  font-size: 1.2em; /* Adjust the font size */
+  padding: 15px; /* Adjust the padding around the data */
+  border-radius: 5px;
+  
+}
+
+/* Style for table data */
+.tableResults td {
+  background-color: #FAEF9B; /* Set the background color of the data */
+  text-align: center; /* Align the text to the center */
+  font-size: 1em; /* Adjust the font size */
+  border-radius: 1px;
+  padding: 15px; /* Adjust the padding around the data */
+}
+
+/* Style for container */
+.tableContainer {
+  width: 80%; /* Adjust this value as needed */
+  margin: 0 auto; /* This will center the container */
+}

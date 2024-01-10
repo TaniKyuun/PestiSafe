@@ -1,49 +1,26 @@
 {% extends "base.html" %}
 {% block title %}Dashboard{% endblock %}
 {% block content %}
-  <h1>DASHBOARD</h1>
-  <style>
-/*Dashboard table*/
-.table-bordered td, .table-bordered th {
-   border: 1px solid #dee2e6;
-}
-.thead-custom th {
-   background-color: #ffc000;
-   color: black;
-}
-.table-striped tbody tr:nth-of-type(odd) {
-   background-color: #ffe8cb;
-}
-
-/*legend table*/
-.legend-row th {
-   background-color: #dbdbdb;
-   color: black;
-   font-weight: bold; /* Make the text bold */
-}
-.normal-level {
-   background-color: #ffff66;
-   color: black; /* Make the text black to stand out against the background */
-   font-weight: bold; /* Make the text bold */
-}
-.high-level {
-   background-color: #ffc000;
-   color: black; /* Make the text black to stand out against the background */
-   font-weight: bold; /* Make the text bold */
-}
-.critical-level {
-   background-color: #ff0000;
-   color: rgb(0, 0, 0); /* Make the text white to stand out against the background */
-   font-weight: bold; /* Make the text bold */
-}
-
-  </style>
-  <h4>Date: January 11, 2024</h4>
+<div class="container">
+<div class="tableContainer">
+  <h1 class="dateDashboard">Date: January 11, 2024</h1>
+      <!-- Container for images -->
+    <div class="imageContainer">
+      <img src="{{ url_for('static', filename='img/mission.jpg') }}"
+      alt="#" alt="Description of image 1">
+      <!-- Add more images as needed -->
+      <div class="boxContainer">
+        <h2>Pesticide Residue Level Detected</h2>
+        <div class="levelBox critical-level">
+          <p>Critical Level</p>
+        </div>
+      </div>
+    </div>
   <table class="table table-bordered table-striped table-hover">
     <thead class="thead-custom">
       <tr>
         <th scope="col">Crop Sample</th>
-        <th scope="col">Pesticide Found (Active Ingredient)</th>
+        <th scope="col">Pesticide Found <br>(Active Ingredient)</th>
         <th scope="col">Pesticide Class</th>
         <th scope="col">Codex MRL</th>
         <th scope="col">Interpretation</th>
@@ -61,10 +38,10 @@
       </tr>
     </tbody>
   </table>
-  <table class="table table-bordered table-striped table-hover">
+  <table class="table table-bordered table-striped table-hover legend-table">
     <thead class="thead-custom legend-row">
       <tr>
-        <th scope="col" colspan="6">Legend:</th>
+        <th class="legend" scope="col" colspan="6">Legend:</th>
       </tr>
     </thead>
     <tbody>
@@ -75,4 +52,6 @@
       </tr>
     </tbody>
   </table>
+</div>
+</div>
   {% endblock %}
