@@ -1,63 +1,99 @@
 {% extends "base.html" %}
-{% block title %}Dashboard{% endblock %}
+{% block title %}All Notes{% endblock %}
 {% block content %}
-  <div class="container">
-    <div class="tableContainer">
-      <h1 class="dateDashboard">Date: January 11, 2024</h1>
-      <!-- Container for images -->
-      <div class="imageContainer">
-        <img src="{{ url_for('static', filename='img/mission.jpg') }}"
-             height="550"
-             width="400"
-             alt="Description of image 1">
-        <!-- Add more images as needed -->
-        <div class="boxContainer">
-          <h2>Pesticide Residue Level Detected</h2>
-          <div class="levelBox critical-level">
-            <p>Critical Level</p>
-          </div>
-        </div>
-      </div>
-      <table class="table table-bordered table-striped table-hover">
-        <thead class="thead-custom">
-          <tr>
-            <th scope="col">Crop Sample</th>
-            <th scope="col">
-              Pesticide Found
-              <br>
-              (Active Ingredient)
-            </th>
-            <th scope="col">Pesticide Class</th>
-            <th scope="col">Codex MRL</th>
-            <th scope="col">Interpretation</th>
-            <th scope="col">Recommendation</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Cavendish Banana</td>
-            <td>Chlorpyrifos</td>
-            <td>Organophosphate</td>
-            <td>2 mg/kg</td>
-            <td>Do not conform with Codex MRL; Toxic</td>
-            <td>Diminish the concentration of pesticide treatment to less than or equal to 2mg/kg.</td>
-          </tr>
-        </tbody>
-      </table>
-      <table class="table table-bordered table-striped table-hover legend-table">
-        <thead class="thead-custom legend-row">
-          <tr>
-            <th class="legend" scope="col" colspan="6">Legend:</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="normal-level">Normal Level</td>
-            <td class="high-level">High Level</td>
-            <td class="critical-level">Critical Level</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+  <!-- Functioning Code
+<h1 align="center">All Notes</h1>
+<ul class="list-group list-group-flush" id="notes">
+  {% for note in user.notes %}
+  <li class="list-group-item">
+    {{ note.data }}
+    <button type="button" class="close" onClick="deleteNote({{ note.id }})">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </li>
+  {% endfor %}
+</ul>
+-->
+  <!-- Title -->
+  <div class="tableContainer">
+    <h1 class="title">PESTICIDE RESIDUE LEVEL DETECTION TEST HISTORY</h1>
+    <!-- Table with class name "tableResults" -->
+    <table class="tableResults">
+      <!-- Table header -->
+      <thead>
+        <tr>
+          <th scope="col">Date</th>
+          <th scope="col">Batch</th>
+          <th scope="col">Crop Sample</th>
+          <th scope="col">
+            Pesticide Found
+            <br>
+            (Active Ingredient)
+          </th>
+          <th scope="col">Pesticide Class</th>
+          <th scope="col">Codex MRL</th>
+          <th scope="col">Pesticide Residue Level</th>
+          <th scope="col">Interpretation</th>
+          <th scope="col">Recommendation</th>
+        </tr>
+      </thead>
+      <!-- Table body -->
+      <tbody>
+        <tr>
+          <td>01/01/2024</td>
+          <td>4</td>
+          <td>Cavendish Banana</td>
+          <td>Chlorpyrifos</td>
+          <td>Organophosphate</td>
+          <td>2 mg/kg</td>
+          <td>High Level</td>
+          <td>Do not conform with Codex MRL; Toxic</td>
+          <td>Diminish the concentration of pesticide treatment to less than or equal to 2mg/kg.</td>
+        </tr>
+        <!-- More rows as needed -->
+      </tbody>
+      <tbody>
+        <tr>
+          <td>01/03/2024</td>
+          <td>3</td>
+          <td>Cavendish Banana</td>
+          <td>Chlorpyrifos</td>
+          <td>Organophosphate</td>
+          <td>2 mg/kg</td>
+          <td>Normal Level</td>
+          <td>Conformed with Codex MRL</td>
+          <td>Accepted pesticide concentration treatment. Suggested to retain the concentration level.</td>
+        </tr>
+        <!-- More rows as needed -->
+      </tbody>
+      <tbody>
+        <tr>
+          <td>09/17/2023</td>
+          <td>2</td>
+          <td>Cavendish Banana</td>
+          <td>Chlorpyrifos</td>
+          <td>Organophosphate</td>
+          <td>2 mg/kg</td>
+          <td>High Level</td>
+          <td>Do not conform with Codex MRL; Toxic</td>
+          <td>Diminish the concentration of pesticide treatment to less than or equal to 2mg/kg.</td>
+        </tr>
+        <!-- More rows as needed -->
+      </tbody>
+      <tbody>
+        <tr>
+          <td>07/03/2023</td>
+          <td>1</td>
+          <td>Cavendish Banana</td>
+          <td>Chlorpyrifos</td>
+          <td>Organophosphate</td>
+          <td>2 mg/kg</td>
+          <td>Critical Level</td>
+          <td>Do not conform with Codex MRL; Toxic</td>
+          <td>Diminish the concentration of pesticide treatment to less than or equal to 2mg/kg.</td>
+        </tr>
+        <!-- More rows as needed -->
+      </tbody>
+    </table>
   </div>
 {% endblock %}
