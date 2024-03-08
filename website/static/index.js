@@ -14,7 +14,7 @@ $('a[href^="#"]').on("click", function (event) {
 
 let header = document.getElementById("myHeader");
 
-window.addEventListener("scroll", function () {
+window.addEventListener("scroll", () => {
   if (window.scrollY > 100) {
     header.style.backgroundColor = "#1c5d34";
   } else {
