@@ -8,15 +8,10 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// Get the header element
-var header = document.getElementById("myHeader");
+let header = document.getElementById("myHeader");
 
-// Listen for scroll events
 window.addEventListener("scroll", function () {
-  // Check scroll position
   if (window.scrollY > 100) {
-    // adjust this value based on when you want to change the header
-    // Modify the header when scrolled down
     header.style.backgroundColor = "#1c5d34";
   } else {
     // Modify the header when at the top
@@ -24,10 +19,9 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// JavaScript
 // Flash message Close Event
 // Get all close buttons
-var closebtns = document.getElementsByClassName("close");
+let closebtns = document.getElementsByClassName("close");
 
 // Loop through all close buttons
 for (var i = 0; i < closebtns.length; i++) {
