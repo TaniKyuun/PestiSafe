@@ -7,7 +7,7 @@ $('a[href^="#"]').on("click", function (event) {
         scrollTop: target.offset().top,
       },
       1000,
-      "easeInOutExpo",
+      "easeInOutExpo"
     );
   }
 });
@@ -25,7 +25,7 @@ window.addEventListener("scroll", () => {
 const closebtns = document.getElementsByClassName("close");
 
 // Loop through all close buttons
-for (var i = 0; i < closebtns.length; i++) {
+for (let i = 0; i < closebtns.length; i++) {
   // When a close button is clicked
   closebtns[i].addEventListener("click", function () {
     // Hide the flash message
