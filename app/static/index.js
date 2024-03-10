@@ -1,5 +1,5 @@
 $('a[href^="#"]').on("click", function (event) {
-  var target = $(this.getAttribute("href"));
+  const target = $(this.getAttribute("href"));
   if (target.length) {
     event.preventDefault();
     $("html, body").stop().animate(

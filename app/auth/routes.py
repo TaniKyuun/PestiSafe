@@ -1,5 +1,7 @@
 from flask import render_template
-from app.auth import bp
+from flask import Blueprint
+
+bp = Blueprint("auth", __name__)
 
 
 @bp.route("/")
