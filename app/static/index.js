@@ -7,23 +7,26 @@ $('a[href^="#"]').on("click", function (event) {
         scrollTop: target.offset().top,
       },
       1000,
-      "easeInOutExpo",
+      "easeInOutExpo"
     );
   }
 });
 
-// Get the header element
-var header = document.getElementById("myHeader");
+const header = document.getElementById("myHeader");
 
-// Listen for scroll events
-window.addEventListener("scroll", function () {
-  // Check scroll position
+window.addEventListener("scroll", () => {
   if (window.scrollY > 100) {
-    // adjust this value based on when you want to change the header
-    // Modify the header when scrolled down
     header.style.backgroundColor = "#1c5d34";
   } else {
-    // Modify the header when at the top
     header.style.backgroundColor = "rgba(174, 246, 148, 0.15)";
   }
 });
+
+const closebtns = document.getElementsByClassName("close");
+
+for (let i = 0; i < closebtns.length; i++) {
+  closebtns[i].addEventListener("click", function () {
+    // Hide the flash message
+    this.parentElement.style.display = "none";
+  });
+}
