@@ -11,7 +11,7 @@ body {
   height: 100vh;
 }
 
-header {
+.myHeader {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 30px;
@@ -23,11 +23,11 @@ header {
   z-index: 10;
 }
 
-header .logo-container {
+.myHeader .logo-container {
   grid-column: 2 / 6;
 }
 
-header .logo {
+.myHeader .logo {
   display: flex;
   align-items: center;
   white-space: nowrap;
@@ -41,22 +41,22 @@ header .logo {
   color: white;
 }
 
-header nav {
+.myHeader .myNav {
   grid-column: 11;
   justify-self: end;
 }
 
-header nav ul {
+.myHeader .myNav ul {
   display: flex;
 }
 
-header nav ul li {
+.myHeader .myNav ul li {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-header nav ul li a {
+.myHeader .myNav ul li a {
   padding: 1rem 2rem;
   font-size: 1rem;
   display: inline-block;
