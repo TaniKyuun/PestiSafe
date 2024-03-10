@@ -7,7 +7,5 @@ bp = Blueprint("main", __name__)
 @bp.route("/")
 @bp.route("/index")
 def index():
-    """
-    Render Website Registration Page.
-    """
+    """Render Website Registration Page."""
     return render_template("index.html")

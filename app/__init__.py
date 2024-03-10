@@ -3,9 +3,7 @@ from config import Config
 
 
 def create_app(config_class=Config):
-    """
-    Factory function to create the Flask application.
-    """
+    """Factory function to create the Flask application."""
     app = Flask(__name__)
     app.config.from_object(config_class)
 

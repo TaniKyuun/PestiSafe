@@ -6,4 +6,6 @@ load_dotenv(os.path.join(basedir, ".env"))
 
 
 class Config:
+    """Configuration class for PestiSafe application."""
+
     SECRET_KEY = os.environ.get("SECRET_KEY") or "you-will-never-guess"
