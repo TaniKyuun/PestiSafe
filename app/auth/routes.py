@@ -5,6 +5,9 @@ bp = Blueprint("auth", __name__)
 
 
 @bp.route("/")
-@bp.route("/index")
+@bp.route("/login")
 def index():
+    """
+    Render Website Registration Page.
+    """
     return render_template("index.html")
