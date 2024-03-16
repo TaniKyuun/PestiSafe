@@ -9,7 +9,7 @@ def create_app(config_class=Config):
 
     from app.auth.routes import bp as auth_bp
 
-    app.register_blueprint(auth_bp, url_prefix="/auth")
+    app.register_blueprint(auth_bp)
 
     from app.main.routes import bp as main_bp
 
