@@ -16,12 +16,15 @@
           href="{{ url_for('static', filename='styles.css') }}" />
     <title>
       {% block title %}
-        PestiSafe
+        {% if title %}
+          {{ title }} | PestiSafe
+        {% else %}
+          PestiSafe
+        {% endif %}
       {% endblock title %}
     </title>
   </head>
   <body>
-    <!-- Header -->
     {% block header %}
       <div class="myHeader" id="myHeader">
         <div class="logo-container">
@@ -38,9 +41,9 @@
         </div>
         <div class="myNav">
           <ul>
-            {% if user.is_authenticated %}
+            {% if current_user.is_authenticated %}
               <li>
-                <a href="{{ url_for("views.home") }}#anchor-home">Home</a>
+                <a href="{{ url_for("main.index") }}#anchor-home">Home</a>
               </li>
               <li>
                 <a id="submit_sample" href="/submit_sample">Submit Sample</a>
@@ -56,13 +59,13 @@
               </li>
             {% else %}
               <li>
-                <a href="{{ url_for("views.home") }}#anchor-home">Home</a>
+                <a href="#anchor-home">Home</a>
               </li>
               <li>
-                <a href="{{ url_for("views.home") }}#anchor-about">About</a>
+                <a href="#anchor-about">About</a>
               </li>
               <li>
-                <a href="{{ url_for("views.home") }}#anchor-contact">Contact</a>
+                <a href="#anchor-contact">Contact</a>
               </li>
             {% endif %}
           </ul>
@@ -70,7 +73,7 @@
       </div>
     {% endblock header %}
     {% block content %}
-      <!-- Content Here-->
+      <!-- Base Content Here -->
     {% endblock content %}
     <!-- Footer Start-->
     <!-- Footer End-->
