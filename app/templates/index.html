@@ -19,18 +19,33 @@
     </div>
     <div class="myNav">
       <ul>
-        <li>
-          <a href="#anchor-home">Home</a>
-        </li>
-        <li>
-          <a href="#anchor-about">About</a>
-        </li>
-        <li>
-          <a href="#anchor-contact">Contact</a>
-        </li>
-        <li>
-          <a href="/submit_sample">Get Started</a>
-        </li>
+        {% if current_user.is_authenticated %}
+          <li>
+            <a href="#anchor-home">Home</a>
+          </li>
+          <li>
+            <a id="submit_sample" href="/submit_sample">Submit Sample</a>
+          </li>
+          <li>
+            <a id="dashboard" href="/dashboard">Dashboard</a>
+          </li>
+          <li>
+            <a id="result" href="/result">Result</a>
+          </li>
+          <li>
+            <a id="logout" href="/logout">Logout</a>
+          </li>
+        {% else %}
+          <li>
+            <a href="#anchor-home">Home</a>
+          </li>
+          <li>
+            <a href="#anchor-about">About</a>
+          </li>
+          <li>
+            <a href="#anchor-contact">Contact</a>
+          </li>
+        {% endif %}
       </ul>
     </div>
   </div>
