@@ -1,6 +1,10 @@
 version = 1
 
 [[analyzers]]
+name = "test-coverage"
+enable=true
+
+[[analyzers]]
 name = "javascript"
 
   [analyzers.meta]
