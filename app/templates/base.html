@@ -1,44 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description"
-          content="Welcome to PestiSafe, your trusted partner in ensuring the safety and quality of Cavendish bananas." />
+    <meta
+      name="description"
+      content="Welcome to PestiSafe, your trusted partner in ensuring the safety and quality of Cavendish bananas."
+    />
     <meta name="keywords" content="PestiSafe" />
-    <link rel="icon"
-          href="{{ url_for('static', filename='img/favicon.ico') }}"
-          type="image/x-icon" />
-    <link rel="shortcut icon"
-          href="{{ url_for('static', filename='img/favicon.ico') }}"
-          type="image/x-icon" />
-    <link rel="stylesheet"
-          href="{{ url_for('static', filename='styles.css') }}" />
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='img/favicon.ico') }}"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='img/favicon.ico') }}"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
     <title>
-      {% block title %}
-        {% if title %}
-          {{ title }} | PestiSafe
-        {% else %}
-          PestiSafe
-        {% endif %}
-      {% endblock title %}
+      {% block title %} {% if title %} {{ title }} | PestiSafe {% else %}
+      PestiSafe {% endif %} {% endblock title %}
     </title>
   </head>
   <body>
     {% block header %}
-      <!-- Header Content Here-->
-    {% endblock header %}
-    {% block content %}
-      <!-- Base Content Here -->
+    <!-- Header Content Here-->
+    {% endblock header %} {% block content %}
+    <!-- Base Content Here -->
     {% endblock content %}
     <!-- Footer Start-->
     <!-- Footer End-->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-    <script type="module"
-            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule
-            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <script src="{{ url_for('static', filename='index.js') }}"></script>
   </body>
 </html>

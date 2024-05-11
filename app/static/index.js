@@ -12,7 +12,7 @@ $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
           scrollTop: target.offset().top,
         },
         1000,
-        "easeInOutExpo"
+        "easeInOutExpo",
       );
       return false;
     }
