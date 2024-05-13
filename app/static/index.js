@@ -1,22 +1,11 @@
 // Smooth scrolling using jQuery easing
-$('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
-  if (
-    location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") &&
-    location.hostname == this.hostname
-  ) {
-    var target = $(this.hash);
-    target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
-    if (target.length) {
-      $("html, body").animate(
-        {
-          scrollTop: target.offset().top,
-        },
-        1000,
-        "easeInOutExpo"
-      );
-      return false;
-    }
-  }
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth",
+    });
+  });
 });
 
 // Change header background color on scroll
@@ -51,3 +40,19 @@ document
       profileSelection.style.display = "none";
     }
   });
+
+function toggleNavbar() {
+  var x = document.getElementById("myTopnav");
+  var hamburger = document.querySelector(".hamburger-menu");
+  var navList = document.querySelector("#myTopnav ul"); // Select the unordered list within the navbar
+
+  if (x.className === "nav") {
+    x.className += " responsive";
+    hamburger.classList.add("open"); // Add open class
+    navList.style.display = "block"; // Display the unordered list
+  } else {
+    x.className = "nav";
+    hamburger.classList.remove("open"); // Remove open class
+    navList.style.display = "none"; // Hide the unordered list
+  }
+}

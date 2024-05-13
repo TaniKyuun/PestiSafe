@@ -17,111 +17,118 @@
         <p class="logo-text">PestiSafe</p>
       </div>
     </div>
-    <div class="myNav">
-      <ul>
-        {% if current_user.is_authenticated %}
-          <li>
-            <a class="nav-link" href="#anchor-home">
-              <div class="icon-text">
-                <span class="material-icons">home</span>
-                <span>Home</span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a class="nav-link" href="#anchor-about">
-              <div class="icon-text">
-                <span class="material-icons">info</span>
-                <span>About</span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a class="nav-link" href="#anchor-contact">
-              <div class="icon-text">
-                <span class="material-icons">contacts</span>
-                <span>Contact</span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a class="nav-link" href="/submit_sample">
-              <div class="icon-text">
-                <span class="material-icons">upload_file</span>
-                <span>Submit Sample</span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <div class="profile-container">
-              <div class="profile-image">
-                <span id="profile-picture" class="material-icons">account_circle</span>
-              </div>
-              <ul id="profile-selection" class="profile-selection">
-                <li>
-                  <a href="#">
-                    <div class="icon-text">
-                      <span class="material-icons">dashboard</span>
-                      <span>Dashboard</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="icon-text">
-                      <span class="material-icons">manage_accounts</span>
-                      <span>Profile</span>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="/logout">
-                    <div class="icon-text">
-                      <span class="material-icons">logout</span>
-                      <span>Logout</span>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </li>
-        {% else %}
-          <li>
-            <a class="nav-link" href="#anchor-home">
-              <div class="icon-text">
-                <span class="material-icons">home</span>
-                <span>Home</span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a class="nav-link" href="#anchor-about">
-              <div class="icon-text">
-                <span class="material-icons">info</span>
-                <span>About</span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a class="nav-link" href="#anchor-contact">
-              <div class="icon-text">
-                <span class="material-icons">contacts</span>
-                <span>Contact</span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <div class="login-container">
-              <a class="login-link" href="/login">
+    <div class="nav" id="myTopnav">
+      <div class="hamburger-menu" onclick="toggleNavbar()">
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
+      </div>
+      <div class="nav-item-container">
+        <ul class="nav-items">
+          {% if current_user.is_authenticated %}
+            <li>
+              <a class="nav-link" href="#anchor-home">
                 <div class="icon-text">
-                  <span class="material-icons">login</span>
-                  <span>Login</span>
+                  <span class="material-icons">home</span>
+                  <span>Home</span>
                 </div>
               </a>
-            </div>
-          </li>
-        {% endif %}
-      </ul>
+            </li>
+            <li>
+              <a class="nav-link" href="#anchor-about">
+                <div class="icon-text">
+                  <span class="material-icons">info</span>
+                  <span>About</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="#anchor-contact">
+                <div class="icon-text">
+                  <span class="material-icons">contacts</span>
+                  <span>Contact</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="/submit_sample">
+                <div class="icon-text">
+                  <span class="material-icons">upload_file</span>
+                  <span>Submit Sample</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <div class="profile-container">
+                <div class="profile-image">
+                  <span id="profile-picture" class="material-icons">account_circle</span>
+                </div>
+                <ul id="profile-selection" class="profile-selection">
+                  <li>
+                    <a href="#">
+                      <div class="icon-text">
+                        <span class="material-icons">dashboard</span>
+                        <span>Dashboard</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="icon-text">
+                        <span class="material-icons">manage_accounts</span>
+                        <span>Profile</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/logout">
+                      <div class="icon-text">
+                        <span class="material-icons">logout</span>
+                        <span>Logout</span>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          {% else %}
+            <li>
+              <a class="nav-link" href="#anchor-home">
+                <div class="icon-text">
+                  <span class="material-icons">home</span>
+                  <span>Home</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="#anchor-about">
+                <div class="icon-text">
+                  <span class="material-icons">info</span>
+                  <span>About</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="#anchor-contact">
+                <div class="icon-text">
+                  <span class="material-icons">contacts</span>
+                  <span>Contact</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <div class="login-container">
+                <a class="login-link" href="/login">
+                  <div class="icon-text">
+                    <span class="material-icons">login</span>
+                    <span>Login</span>
+                  </div>
+                </a>
+              </div>
+            </li>
+          {% endif %}
+        </ul>
+      </div>
     </div>
   </div>
 {% endblock header %}
