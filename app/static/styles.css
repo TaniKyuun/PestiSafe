@@ -110,9 +110,7 @@ body {
   background-color: rgba(28, 93, 52, 0.75);
   border: 2px solid #aef694;
   border-radius: 10px;
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .myHeader .nav ul li a.login-link:hover {
@@ -232,8 +230,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background:
-    linear-gradient(180deg, rgba(2, 66, 35, 0) 62.5%, #024223 100%),
+  background: linear-gradient(180deg, rgba(2, 66, 35, 0) 62.5%, #024223 100%),
     linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%),
     url(img/aef8fb2cd567738619e6cf0ce2ed0336.jpg) center center,
     lightgray 50% / cover no-repeat;
@@ -286,9 +283,7 @@ body {
   opacity: 0;
   transform: translateY(-50%);
   visibility: hidden;
-  transition:
-    opacity 0.3s ease,
-    visibility 0.3s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .btn-starter:hover .btn-starter-icon {
@@ -465,7 +460,7 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-color: #727272;
+  background-color: #3f632d;
   font-family: Arial, sans-serif;
 }
 
@@ -506,3 +501,5 @@ body {
 .auth-container input[type="submit"]:hover {
   background-color: #45a049;
 }
+
+/* File Submission */
