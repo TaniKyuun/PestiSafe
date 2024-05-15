@@ -18,21 +18,120 @@
       <p class="logo-text">PestiSafe</p>
     </div>
   </div>
-  <div class="myNav">
-    <ul>
-      <li>
-        <a href="#anchor-home">Home</a>
-      </li>
-      <li>
-        <a href="#anchor-about">About</a>
-      </li>
-      <li>
-        <a href="#anchor-contact">Contact</a>
-      </li>
-      <li>
-        <a href="/submit_sample">Get Started</a>
-      </li>
-    </ul>
+  <div class="nav" id="myTopnav">
+    <div class="hamburger-menu" onclick="toggleNavbar()">
+      <div class="burger-line"></div>
+      <div class="burger-line"></div>
+      <div class="burger-line"></div>
+    </div>
+    <div class="nav-item-container">
+      <ul class="nav-items">
+        {% if current_user.is_authenticated %}
+        <li>
+          <a class="nav-link" href="#anchor-home">
+            <div class="icon-text">
+              <span class="material-icons">home</span>
+              <span>Home</span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="#anchor-about">
+            <div class="icon-text">
+              <span class="material-icons">info</span>
+              <span>About</span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="#anchor-contact">
+            <div class="icon-text">
+              <span class="material-icons">contacts</span>
+              <span>Contact</span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="/submit_sample">
+            <div class="icon-text">
+              <span class="material-icons">upload_file</span>
+              <span>Submit Sample</span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <div class="profile-container">
+            <div class="profile-image">
+              <span id="profile-picture" class="material-icons"
+                >account_circle</span
+              >
+            </div>
+            <ul id="profile-selection" class="profile-selection">
+              <li>
+                <a href="#">
+                  <div class="icon-text">
+                    <span class="material-icons">dashboard</span>
+                    <span>Dashboard</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="icon-text">
+                    <span class="material-icons">manage_accounts</span>
+                    <span>Profile</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="/logout">
+                  <div class="icon-text">
+                    <span class="material-icons">logout</span>
+                    <span>Logout</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        {% else %}
+        <li>
+          <a class="nav-link" href="#anchor-home">
+            <div class="icon-text">
+              <span class="material-icons">home</span>
+              <span>Home</span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="#anchor-about">
+            <div class="icon-text">
+              <span class="material-icons">info</span>
+              <span>About</span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="#anchor-contact">
+            <div class="icon-text">
+              <span class="material-icons">contacts</span>
+              <span>Contact</span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <div class="login-container">
+            <a class="login-link" href="/login">
+              <div class="icon-text">
+                <span class="material-icons">login</span>
+                <span>Login</span>
+              </div>
+            </a>
+          </div>
+        </li>
+        {% endif %}
+      </ul>
+    </div>
   </div>
 </div>
 {% endblock header %} {% block content %}
@@ -98,11 +197,12 @@
       <p>
         Cultivating Safety, Harvesting Quality:
         <br />
-        Your Trusted Partner in Pesticide Residue Level Detection.
+        Your Trusted Partner in Pesticide Residue Level Detection
       </p>
     </div>
     <div class="starter-container">
-      <a href="/login" class="btn-starter">
+      {% if current_user.is_authenticated %}
+      <a href="/submit_sample" class="btn-starter">
         GET STARTED
         <span class="btn-starter-icon">
           <svg
@@ -119,6 +219,25 @@
           </svg>
         </span>
       </a>
+      {% else %}
+      <a href="/register" class="btn-starter">
+        GET STARTED
+        <span class="btn-starter-icon">
+          <svg
+            width="15"
+            height="20"
+            viewBox="0 0 15 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M-0.000104904 1.00057L-0.000104904 19.0006C0.000466347 19.1828 0.0507298 19.3615 0.145273 19.5173C0.239817 19.673 0.37506 19.8001 0.536448 19.8848C0.697835 19.9694 0.879255 20.0085 1.06118 19.9977C1.2431 19.9869 1.41864 19.9267 1.5689 19.8236L14.5689 10.8236C15.1079 10.4506 15.1079 9.55257 14.5689 9.17857L1.5689 0.178574C1.41895 0.0743986 1.24333 0.0133079 1.0611 0.00193892C0.878874 -0.00943004 0.697017 0.0293576 0.535288 0.114088C0.373559 0.198818 0.238141 0.32625 0.143751 0.482538C0.0493612 0.638826 -0.000392914 0.817994 -0.000104904 1.00057Z"
+              fill="#111111"
+            />
+          </svg>
+        </span>
+      </a>
+      {% endif %}
     </div>
   </div>
 </div>

@@ -161,4 +161,4 @@ cython_debug/
 
 # vscode
 .vscode/
-.designplan
+.designplan/
